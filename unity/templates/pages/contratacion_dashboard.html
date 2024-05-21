@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Contratación Dashboard
+{% endblock%}
+
+{% block content%}
+<div class="mx-auto w-full min-h-screen overflow-auto">
+
+    <div class="flex items-center justify-start p-3 grid grid-rows-2 grid-flow-col gap-3">
+        <div class="flex row-span-3 p-4">
+            <div class="text-5xl font-plus-jakarta">
+                <span class="font-plus-jakarta bg-clip-text text-transparent bg-gray-700">Municipio de Yarumal</span>
+            </div>
+        </div>
+        <div class=" shadow-md rounded-md col-span-2 p-4 bg-blue-50">
+            <h1 class="text-5xl font-medium leading-tight">{{ numero_de_registros }}</h1>CONTRATOS CELEBRADOS</div>
+        <div class=" shadow-md rounded-md bg-blue-50 row-span-2 col-span-2 p-4"><div class="text-5xl font-medium leading-tight">20</div>PROCESOS EN EJECUCION</div>
+        <div class=" shadow-md rounded-md bg-blue-50 row-span-3 p-4">
+            <div class="text-5xl font-medium leading-tight">${{ suma_valor_del_contrato }}</div>MILLLONES CONTRATADOS</div>
+    </div>
+
+    <div class="flex w-full h-auto">
+        <canvas id="myChart" class="w-full h-full" width="500" height="150"></canvas>
+    </div>
+    
+    <div class="flex w-full h-30 grid gap-2 grid-cols-2">
+        <div class="flex">
+            <canvas id="myChart2"></canvas>
+        </div>
+        <div class="flex">
+            <canvas id="myChart3" class="w-full h-full" width="500" height="500"></canvas>
+        </div>
+        <div class="flex "> </div>
+        <div class="flex "> </div>
+    </div>
+    
+</div>
+
+{% endblock%}
+
+{% block javascript %}
+    {% comment "" %}<canvas id="myChart" width="50" height="50"></canvas>{% endcomment %}    
+{% endblock javascript %}
