@@ -1,5 +1,9 @@
 from django.db import models
 
+## éste modulo o servicio de mi aplicación lo que hace es tratat el registro a mi base de datos
+## cada uno de los proveedores ingresados por el usuario
+## es importante resaltar que el usuario NO tiene la opción de modificar, ni alterar, ni cambiar
+## la información luego de ser suministrada
 class Proveedor(models.Model):
     PERSONA_NATURAL = '1'
     PERSONA_JURIDICA = '2'
@@ -27,4 +31,3 @@ class Proveedor(models.Model):
 
     def __str__(self):
         return self.nombre_razon_social
-

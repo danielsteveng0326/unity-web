@@ -5,6 +5,8 @@ from django.db import transaction
 from .models import Contrato
 from . import views
 
+### acá tengo mi función para hacer el cargue de los datos o los datos nuevos de mi archivo estático .csv
+
 def cargar_datos_desde_csv():
     # Abrir el archivo CSV y cargar los datos
     ruta_archivo = "static/csv/2024_yar_alc.csv"

@@ -1,5 +1,8 @@
 from django.db import models
 
+# mi clase contrato, tiene los siguientes atributos, los cuales son obtenidos desde datos.gov
+## en éste archivo hago el modelo que me permitirá crear mi tabla en mi DB de PostgreSQL
+### es importante destacar que en general el trámite es el mismo, pero no se hace en SQL sino en python
 class Contrato(models.Model):
 
     id_contrato = models.CharField(max_length=100, primary_key=True)
@@ -73,6 +76,9 @@ class Contrato(models.Model):
     fecha_inicio_liquidacion = models.DateTimeField(null=True)
     fecha_fin_liquidacion = models.DateTimeField(null=True)
 
+    # finalmente retorno a través del self la identificación del contrato el cuál es generado por SECOP
+    ## el cuál será mi primary key para darle un mejor tratamiento a las consultas
+    ### e identificar de manera única mis registros
 
     def __str__(self):
         return self.id_contrato

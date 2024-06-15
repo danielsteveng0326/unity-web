@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from .models import Contrato
 from django.db.models import Sum, Count
 
+## acá encontramos las vistas que renderizaremos y mostraremos a través de nuestras plantillas de HTML
+
 def cargar(request):
     cargar_datos_desde_csv()
     return render (request, 'pages/ok.html', {})

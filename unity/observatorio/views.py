@@ -3,7 +3,8 @@ from . models import Observatorio
 from django.utils import timezone
 from django.http import HttpResponse
 
-
+## ésta primer función lo que hace es devolver a través de los objetos obtenidos luego de mi consulta SQL
+## a mi motor de base de datos que es PostgreSQL y la renderiza como lo veremos más adelante
 
 def ver(request):
 

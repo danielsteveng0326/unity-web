@@ -1,5 +1,8 @@
 from django.db import models
 
+
+### modelos de datos, que contiene los atributos de los observatorios y su información mas relevante
+
 class Observatorio(models.Model):
     titulo = models.CharField(max_length=100)
     subtitulo = models.CharField(max_length=200)

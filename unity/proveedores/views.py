@@ -2,6 +2,10 @@ from django.shortcuts import render
 from .forms import ProveedorForm
 from .models import Proveedor
 
+## con ésta primera funcion, vamos a comunicar con el método POST el ingreso de la información
+## suministrada por el usuario y luego será ingresada a nuestra base de datos SQL
+
+
 def proveedor_formulario(request):
     if request.method == 'POST':
         form = ProveedorForm(request.POST)
@@ -14,6 +18,9 @@ def proveedor_formulario(request):
 
     return render(request, 'pages/crear_proveedor.html', {'form': form})
 
+
+##en ésta segunda función vamos a traer mas adelante los resultados de las consultas realizadas
+## por el usuario
 
 def proveedor_consulta(request):
     proveedors_all = Proveedor.objects.all()
