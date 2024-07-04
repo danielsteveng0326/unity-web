@@ -13,7 +13,7 @@ class Proveedor(models.Model):
     ]
 
     nombre_razon_social = models.CharField(max_length=100)
-    nit = models.CharField(max_length=20)
+    nit = models.CharField(max_length=20, primary_key=True)
     nombre_rep_legal = models.CharField(max_length=100)
     identificacion = models.CharField(max_length=20)
     telefono = models.CharField(max_length=20)
